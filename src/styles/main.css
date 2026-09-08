@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica';
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'EditorCondensed-Light';
+  src: url('/fonts/EditorCondensed-Light.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
