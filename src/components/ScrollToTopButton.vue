@@ -66,4 +66,20 @@ onUnmounted(() => {
 .fade-leave-to {
   opacity: 0;
 }
+
+@media (max-width: 480px) {
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+  background: transparent; 
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+}
 </style>

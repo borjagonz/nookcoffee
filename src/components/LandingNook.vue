@@ -362,6 +362,11 @@ onBeforeUnmount(() => {
     transition: all 0.3s ease;
 }
 
+.navbar > a {
+    position: relative;
+    z-index: 2001;
+}
+
 .navbar.scrolled {
     height: 70px;
     background-color: #2a18bc;
@@ -387,12 +392,13 @@ onBeforeUnmount(() => {
 .logo {
     height: 90px;
     transition: all 0.3s ease;
-    z-index: 999;
+    position: relative;
+    z-index: 2001;
 }
 
 .navbar.scrolled .logo {
     height: 60px;
-    z-index: 999;
+    z-index: 3000;
 
 }
 
@@ -933,24 +939,24 @@ onBeforeUnmount(() => {
     }
 
     .navbuttons{
-        position: fixed;
+    position: fixed;
+    top: 0;
+    right: -100%;
 
-        top: 0;
-        right: -100%;
+    width: 100%;
+    height: 100dvh;
 
-        width: 280px;
-        height: 100vh;
+    background: #2a18bc;
 
-        background: #2a18bc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    gap: 40px;
 
-        gap: 40px;
-
-        transition: .35s ease;
+    transition: .35s ease;
+    z-index: 1500;
     }
 
     .navbuttons.open{
@@ -1039,6 +1045,14 @@ onBeforeUnmount(() => {
     text-align: center;
     margin: 0;}
 
+    .location h1{
+        font-size: 65px;
+    }
+
+    .contact h1 {
+        font-size: 65px;
+    }
+
         .about p{
         font-size: 28px;
     }
@@ -1083,6 +1097,47 @@ onBeforeUnmount(() => {
 .footer {
     font-size: 10px;
 }
+
+.services {
+    flex-direction: column;
+    align-items: center;
+}
+
+.nook-coffee{
+    position: fixed;
+    color: #f0ece1;
+    left: -18px;
+    bottom: 80px;
+    transform: rotate(-90deg);
+    margin: 0px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.about {
+    padding: 120px 70px;
+}
+
+.about p {
+    font-size: 24px;
+}
+
+.menu {
+    padding: 120px 70px 50px;
+}
+
+.menu-2 {
+    padding: 30px 70px 120px;
+}
+
+.location {
+    padding: 120px 70px;
+}
+
+.contact {
+    padding: 120px 70px;
+}
+
 }
 
 @media (max-width: 400px) {
